@@ -370,3 +370,8 @@ template {
   text-align: center;
   margin: 1%;
 }
+
+section>p{
+  text-align: center;
+  margin: 1%;
+}
