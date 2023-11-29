@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+	<link href="/manifest.json" rel="manifest"/>
+	<meta content="#ffffff" name="msapplication-TileColor"/>
+	<meta content="/favicon/ms-icon-144x144.png" name="msapplication-TileImage"/>
+	<meta content="#ffffff" name="theme-color"/>
+	<title>
+		Portfolio
+	</title>
+	<meta content="A modern and minimal CSS framework for terminal lovers." name="description"/>
+	<link href="/css/normalize.css" rel="stylesheet"/>
+	<link href="/terminal.min.css" rel="stylesheet"/>
+	<link href="/favicon/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+	<link href="/favicon/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60"/>
+	<link href="/favicon/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+	<link href="/favicon/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76"/>
+	<link href="/favicon/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+	<link href="/favicon/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120"/>
+	<link href="/favicon/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+	<link href="/favicon/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"/>
+	<link href="/favicon/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+	<link href="/favicon/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+	<link href="/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+	<link href="/favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+	<link href="/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+	<style>
+	 .components-grid {
+			display: grid;
+			grid-column-gap: 1.4em;
+			grid-template-columns: auto;
+			grid-template-rows: auto;
+		}
+
+		.image-grid {
+			display: grid;
+			grid-template-rows: auto;
+			grid-gap: 1em;
+			grid-template-columns: repeat(
+				auto-fit,
+				minmax(calc(var(--page-width) / 12), 1fr)
+			);
+		}
+
+		@media only screen and (min-width: 70em) {
+			.components-grid {
+				grid-template-columns: 3fr 9fr;
+			}
+		}
+	</style>
+	<style>
+	 :root {
+						--global-font-size: 15px;
+						--global-line-height: 1.4em;
+						--global-space: 10px;
+						--font-stack: Menlo, Monaco, Lucida Console, Liberation Mono,
+						DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+						serif;
+						--mono-font-stack: Menlo, Monaco, Lucida Console, Liberation Mono,
+						DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+						serif;
+						--background-color: #222225;
+						--page-width: 60em;
+						--font-color: #e8e9ed;
+						--invert-font-color: #222225;
+						--secondary-color: #a3abba;
+						--tertiary-color: #a3abba;
+						--primary-color: #62c4ff;
+						--error-color: #ff3c74;
+						--progress-bar-background: #3f3f44;
+						--progress-bar-fill: #62c4ff;
+						--code-bg-color: #3f3f44;
+						--input-style: solid;
+						--display-h1-decoration: none;
+				}
+	</style>
+ </head>
+ <body class="terminal">
+	<div class="container">
+	 <div class="terminal-nav">
+		<header class="terminal-logo">
+		 <div class="logo terminal-prompt">
+			<a class="no-style" href="/">
+			 Taiga Ishii
+			</a>
+		 </div>
+		</header>
+		<nav class="terminal-menu">
+		 <ul typeof="BreadcrumbList" vocab="https://schema.org/">
+			<li>
+				<a class="menu-item" href="#About_me">
+					<span>
+					About me.
+					</span>
+				</a>
+				<meta property="position"/>
+			</li>
+			<li property="itemListElement" typeof="ListItem">
+				<a class="menu-item" href="#Carers" property="item" typeof="WebPage">
+					<span property="name">
+					Career.
+					</span>
+				</a>
+				<meta content="1" property="position"/>
+			</li>
+			<li property="itemListElement" typeof="ListItem">
+				<a class="menu-item" href="#History" property="item" typeof="WebPage">
+				<span property="name">
+					History.
+					</span>
+				</a>
+				<meta content="2" property="position"/>
+			</li>
+			<li property="itemListElement" typeof="ListItem">
+				<a class="menu-item" href="#Skills" property="item" typeof="WebPage">
+					<span property="name">
+					Skills.
+					</span>
+				</a>
+				<meta content="1" property="position"/>
+			</li>
+			<li property="itemListElement" typeof="ListItem">
+				<a class="menu-item" href="#Hobbies" property="item" typeof="WebPage">
+					<span property="name">
+					Hobbies.
+					</span>
+				</a>
+				<meta content="2" property="position"/>
+			</li>
+			<li property="itemListElement" typeof="ListItem">
+				<a class="menu-item" href="Socials" property="item" typeof="WebPage">
+					<span property="name">
+					Social.
+					</span>
+				</a>
+				<meta content="3" property="position"/>
+			</li>
+		 </ul>
+		</nav>
+	 </div>
+	</div>
+	<div class="container">
+			<main>
+				<hr id="About_me"/>
+				<section>
+					<header>
+						<h1>
+						About me.
+						</h1>
+					</header>
+					<p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+					<p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+					<p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+					<p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+					<p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+					<p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+				
+				</section>
+				<hr id="Carers"/>
+				<section>
+					<header>
+					<h1>
+						Careers.
+					</h1>
+					</header>
+					<div class="terminal-timeline">
+					<div class="terminal-card">
+						<header>
+						Card Title
+						</header>
+						<div>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quas
+						ex vero enim in doloribus officiis ullam vel nam esse sapiente velit
+						incidunt. Eaque quod et, aut maiores excepturi sint.
+						</div>
+					</div>
+					<div class="terminal-card">
+						<header>
+						Card Title
+						</header>
+						<div>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quas
+						ex vero enim in doloribus officiis ullam vel nam esse sapiente velit
+						incidunt. Eaque quod et, aut maiores excepturi sint.
+						</div>
+					</div>
+					</div>
+					<br/>
+				</section>
+				<hr id="History"/>
+				<section>
+					<header>
+					<h1>
+						History
+					</h1>
+					</header>
+					<table>
+					<caption>
+						Most Downloaded Movies on BitTorrent, 2011
+					</caption>
+					<thead>
+						<tr>
+						<th>
+							Data
+						</th>
+						<th>
+							Discription
+						</th>
+						<th>
+							Age
+						</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<th>
+							1
+						</th>
+						<td>
+							Fast Five
+						</td>
+						<td>
+							9,260,000
+						</td>
+						</tr>
+						<tr>
+						<th>
+							2
+						</th>
+						<td>
+							The Hangover II
+						</td>
+						<td>
+							8,840,000
+						</td>
+						</tr>
+						<tr>
+						<th>
+							3
+						</th>
+						<td>
+							Thor
+						</td>
+						<td>
+							8,330,000
+						</td>
+						</tr>
+						<tr>
+						<th>
+							4
+						</th>
+						<td>
+							Source Code
+						</td>
+						<td>
+							7,910,000
+						</td>
+						</tr>
+						<tr>
+						<th>
+							5
+						</th>
+						<td>
+							I Am Number Four
+						</td>
+						<td>
+							7,670,000
+						</td>
+						</tr>
+						<tr>
+						<th>
+							6
+						</th>
+						<td>
+							Sucker Punch
+						</td>
+						<td>
+							7,200,000
+						</td>
+						</tr>
+						<tr>
+						<th>
+							7
+						</th>
+						<td>
+							127 Hours
+						</td>
+						<td>
+							6,910,000
+						</td>
+						</tr>
+						<tr>
+						<th>
+							8
+						</th>
+						<td>
+							Rango
+						</td>
+						<td>
+							6,480,000
+						</td>
+						</tr>
+						<tr>
+						<th>
+							9
+						</th>
+						<td>
+							The King’s Speech
+						</td>
+						<td>
+							6,250,000
+						</td>
+						</tr>
+						<tr>
+						<th>
+							10
+						</th>
+						<td>
+							Harry Potter and the Deathly Hallows Part 2
+						</td>
+						<td>
+							6,030,000
+						</td>
+						</tr>
+					</tbody>
+					</table>
+				</section>
+				<hr id="Hobbies"/>
+				<section>
+					<header>
+					<h1>
+						Hobbies.
+					</h1>
+					</header>
+					<ul>
+					<li>
+						This is a list item
+					</li>
+					<li>
+						So is this - there could be more
+					</li>
+					<li>
+						Make sure to style list items to:
+						<ul>
+						<li>
+							Not forgetting child list items
+						</li>
+						<li>
+							Not forgetting child list items
+						</li>
+						<li>
+							Not forgetting child list items
+						</li>
+						<li>
+							Not forgetting child list items
+						</li>
+						</ul>
+					</li>
+					<li>
+						A couple more
+					</li>
+					<li>
+						Top-level list items
+					</li>
+					</ul>
+					<p>
+					Don't forget
+					<strong>
+						Ordered lists
+					</strong>
+					:
+					</p>
+					<ol>
+					<li>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+					</li>
+					<li>
+						Aliquam tincidunt mauris eu risus
+						<ol>
+						<li>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+						</li>
+						<li>
+							Aliquam tincidunt mauris eu risus.
+						</li>
+						</ol>
+					</li>
+					<li>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+					</li>
+					<li>
+						Aliquam tincidunt mauris eu risus.
+					</li>
+					</ol>
+					<p>
+					<strong>
+						Description lists
+					</strong>
+					are also included.
+					</p>
+					<dl>
+					<dt>
+						Description list title 01
+					</dt>
+					<dd>
+						Description list description 01
+					</dd>
+					<dt>
+						Description list title 02
+					</dt>
+					<dd>
+						Description list description 02
+					</dd>
+					<dd>
+						Description list description 03
+					</dd>
+					</dl>
+					<p>
+					A
+					<strong>
+						Table of content
+					</strong>
+					, which can be used as an index for a blog archive.
+					</p>
+					<p>
+					Unlike regular lists, the TOC component
+					<em>
+						only supports a single depth level.
+					</em>
+					</p>
+					<ol class="terminal-toc">
+					<li>
+						<a href="#">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Aliquam tincidunt mauris eu risus.
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Aliquam tincidunt mauris eu risus.
+						</a>
+					</li>
+					</ol>
+				</section>
+				<hr id="Skills"/>
+				<div class="example">
+					<div>
+						<section>
+						<header>
+							<h1 id="Progress">
+								Progress Bar
+							</h1>
+						</header>
+						<br/>
+						<p>
+						With only an arrow
+						</p>
+						<div class="progress-bar">
+							<div class="progress-bar-filled" style="width: 40%">
+							</div>
+						</div>
+						<p>
+						With a percentage showing above the arrow
+						</p>
+						<div class="progress-bar progress-bar-show-percent">
+							<div class="progress-bar-filled" data-filled="" style="width: 50%">
+							</div>
+						</div>
+						<p>
+						Without arrow
+						</p>
+						<div class="progress-bar progress-bar-show-percen">
+							<div class="progress-bar-filled" data-filled="Loading 60%" style="width: 60%">
+							</div>
+						</div>
+						<br/>
+						</section>
+					</div>
+					<div>
+						<section>
+						<header>
+							<h1 id="Progress">
+								Progress Bar
+							</h1>
+						</header>
+						<br/>
+						<p>
+						With only an arrow
+						</p>
+						<div class="progress-bar">
+							<div class="progress-bar-filled" style="width: 40%">
+							</div>
+						</div>
+						<p>
+						With a percentage showing above the arrow
+						</p>
+						<div class="progress-bar progress-bar-show-percent">
+							<div class="progress-bar-filled" data-filled="" style="width: 50%">
+							</div>
+						</div>
+						<p>
+						Without arrow
+						</p>
+						<div class="progress-bar progress-bar-show-percen">
+							<div class="progress-bar-filled" data-filled="Loading 60%" style="width: 60%">
+							</div>
+						</div>
+						<br/>
+						</section>
+					</div>
+				</div>
+				<hr id="Socials"/>
+				<section>
+					<header>
+						<h1>
+						Socials.
+						</h1>
+					</header>
+					<p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+					<p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+					<div class="example">
+						<p>X</p>
+						<p>Instagram</p>
+						<p>Facebook</p>
+					</div>
+					<div class="example">
+						<p>github</p>
+						<p>Linked</p>
+						<p>mail</p>
+					</div>
+				</section>
+				<hr/>
+					<footer>
+					<p>
+						This Portfolio is sampled by
+						<a href="https://github.com/Gioni06/" rel="noopener noreferer" target="_blank">
+						@Gioni06
+						</a>
+						work -
+						<a href="https://terminalcss.xyz/dark" rel="noopener noreferer">
+						Terminalcss-dark
+						</a>
+					</p>
+					</footer>
+					<hr/>
+					<section>
+					<header>
+					</header>
+					<p>
+						Created 12/01/2023
+						<a href="/" class="pull-right">
+						Top
+						</a>
+					</p>
+					</section>
+				</hr>
+			</main>
+			</div>
+	</div>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js">
+	</script>
+	<script async="" defer="" src="https://buttons.github.io/buttons.js">
+	</script>
+	<script>
+	 document.addEventListener("DOMContentLoaded", function() {
+				document.querySelectorAll("pre code").forEach(block => {
+						window.hljs.highlightBlock(block);
+				});
+		});
+	</script>
+ </body>
+</html>
