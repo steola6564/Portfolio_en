@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-	<meta charset="utf-8"/>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-	<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
-	<link href="/manifest.json" rel="manifest"/>
-	<meta content="#ffffff" name="msapplication-TileColor"/>
-	<meta content="/favicon/ms-icon-144x144.png" name="msapplication-TileImage"/>
-	<meta content="#ffffff" name="theme-color"/>
+
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="ie=edge" http-equiv="X-UA-Compatible" />
+	<link href="/manifest.json" rel="manifest" />
+	<meta content="#ffffff" name="msapplication-TileColor" />
+	<meta content="/favicon/ms-icon-144x144.png" name="msapplication-TileImage" />
+	<meta content="#ffffff" name="theme-color" />
 	<title>
 		Portfolio
 	</title>
-	<meta content="A modern and minimal CSS framework for terminal lovers." name="description"/>
+	<meta content="A modern and minimal CSS framework for terminal lovers." name="description" />
 	<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.4/dist/terminal.min.css" />
-	<link href="./css/normalize.css" rel="stylesheet"/>
-	<link href="./css/terminal.min.css" rel="stylesheet"/>
+	<link href="./css/normalize.css" rel="stylesheet" />
+	<link href="./css/terminal.min.css" rel="stylesheet" />
 	<link rel="icon" href="./img/favicon.ico">
 	<style>
-	 .components-grid {
+		.components-grid {
 			display: grid;
 			grid-column-gap: 1.4em;
 			grid-template-columns: auto;
@@ -28,10 +29,8 @@
 			display: grid;
 			grid-template-rows: auto;
 			grid-gap: 1em;
-			grid-template-columns: repeat(
-				auto-fit,
-				minmax(calc(var(--page-width) / 12), 1fr)
-			);
+			grid-template-columns: repeat(auto-fit,
+					minmax(calc(var(--page-width) / 12), 1fr));
 		}
 
 		@media only screen and (min-width: 70em) {
@@ -42,761 +41,773 @@
 	</style>
 	<style>
 		:root {
-						--global-font-size: 15px;
-						--global-line-height: 1.4em;
-						--global-space: 10px;
-						--font-stack: Menlo, Monaco, Lucida Console, Liberation Mono,
-						DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
-						serif;
-						--mono-font-stack: Menlo, Monaco, Lucida Console, Liberation Mono,
-						DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
-						serif;
-						--background-color: #222225;
-						--page-width: 60em;
-						--font-color: #e8e9ed;
-						--invert-font-color: #222225;
-						--secondary-color: #ecb9b7;/* #a3abba;*/
-						--tertiary-color: #a3abba;
-						--primary-color: #ff0000;/* #62c4ff;*/
-						--error-color: #ff3c74;/* #ff3c74;*/
-						--progress-bar-background: #3f3f44;
-						--progress-bar-fill: #ff3a3a;
-						--code-bg-color: #3f3f44;
-						--input-style: solid;
-						--display-h1-decoration: none;
-				}
+			--global-font-size: 15px;
+			--global-line-height: 1.4em;
+			--global-space: 10px;
+			--font-stack: Menlo, Monaco, Lucida Console, Liberation Mono,
+				DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+				serif;
+			--mono-font-stack: Menlo, Monaco, Lucida Console, Liberation Mono,
+				DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+				serif;
+			--background-color: #222225;
+			--page-width: 60em;
+			--font-color: #e8e9ed;
+			--invert-font-color: #222225;
+			--secondary-color: #ecb9b7;
+			/* #a3abba;*/
+			--tertiary-color: #a3abba;
+			--primary-color: #ff0000;
+			/* #62c4ff;*/
+			--error-color: #ff3c74;
+			/* #ff3c74;*/
+			--progress-bar-background: #3f3f44;
+			--progress-bar-fill: #ff3a3a;
+			--code-bg-color: #3f3f44;
+			--input-style: solid;
+			--display-h1-decoration: none;
+		}
 	</style>
- </head>
- <body class="terminal" id="top">
+</head>
+
+<body class="terminal" id="top">
 	<div class="container">
-	 <div class="terminal-nav">
-		<header class="terminal-logo">
-		 <div class="logo terminal-prompt">
-			<a class="no-style" href="#top">
-			 Taiga Ishii
-			</a>
-		 </div>
-		</header>
-		<nav class="terminal-menu">
-		 <ul typeof="BreadcrumbList" vocab="https://schema.org/">
-			<li>
-				<a class="menu-item" href="#About_me">
-					<span>
-					About.
-					</span>
-				</a>
-				<meta property="position"/>
-			</li>
-			<li property="itemListElement" typeof="ListItem">
-				<a class="menu-item" href="#Articles" property="item" typeof="WebPage">
-					<span property="name">
-					Articles.
-					</span>
-				</a>
-				<meta content="3" property="position"/>
-			</li>
-			<li property="itemListElement" typeof="ListItem">
-				<a class="menu-item" href="#Carers" property="item" typeof="WebPage">
-					<span property="name">
-					Career.
-					</span>
-				</a>
-				<meta content="1" property="position"/>
-			</li>
-			<li property="itemListElement" typeof="ListItem">
-				<a class="menu-item" href="#History" property="item" typeof="WebPage">
-				<span property="name">
-					History.
-					</span>
-				</a>
-				<meta content="2" property="position"/>
-			</li>
-			<li property="itemListElement" typeof="ListItem">
-				<a class="menu-item" href="#Skills" property="item" typeof="WebPage">
-					<span property="name">
-					Skills.
-					</span>
-				</a>
-				<meta content="1" property="position"/>
-			</li>
-			<li property="itemListElement" typeof="ListItem">
-				<a class="menu-item" href="#Hobbies" property="item" typeof="WebPage">
-					<span property="name">
-					Hobbies.
-					</span>
-				</a>
-				<meta content="2" property="position"/>
-			</li>
-			<li property="itemListElement" typeof="ListItem">
-				<a class="menu-item" href="#Socials" property="item" typeof="WebPage">
-					<span property="name">
-					Social.
-					</span>
-				</a>
-				<meta content="3" property="position"/>
-			</li>
-		 </ul>
-		</nav>
-	 </div>
+		<div class="terminal-nav">
+			<header class="terminal-logo">
+				<div class="logo terminal-prompt">
+					<a class="no-style" href="#top">
+						Taiga Ishii
+					</a>
+				</div>
+			</header>
+			<nav class="terminal-menu">
+				<ul typeof="BreadcrumbList" vocab="https://schema.org/">
+					<li>
+						<a class="menu-item" href="#About_me">
+							<span>
+								About.
+							</span>
+						</a>
+						<meta property="position" />
+					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a class="menu-item" href="#Articles" property="item" typeof="WebPage">
+							<span property="name">
+								Articles.
+							</span>
+						</a>
+						<meta content="3" property="position" />
+					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a class="menu-item" href="#Carers" property="item" typeof="WebPage">
+							<span property="name">
+								Career.
+							</span>
+						</a>
+						<meta content="1" property="position" />
+					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a class="menu-item" href="#History" property="item" typeof="WebPage">
+							<span property="name">
+								History.
+							</span>
+						</a>
+						<meta content="2" property="position" />
+					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a class="menu-item" href="#Skills" property="item" typeof="WebPage">
+							<span property="name">
+								Skills.
+							</span>
+						</a>
+						<meta content="1" property="position" />
+					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a class="menu-item" href="#Hobbies" property="item" typeof="WebPage">
+							<span property="name">
+								Hobbies.
+							</span>
+						</a>
+						<meta content="2" property="position" />
+					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a class="menu-item" href="#Socials" property="item" typeof="WebPage">
+							<span property="name">
+								Social.
+							</span>
+						</a>
+						<meta content="3" property="position" />
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</div>
-		<div class="container">
-			<main>
-				<section id="About_me">
-					<header>
-						<h1>
-						About me.
-						</h1>
-					</header>
-					<p>Hi there! I'm Taiga Ishii! Nice to meet you!</p>
-					<p>I've been working with computers since I was a child, and now I'm a freelance engineer.</p>
-					<p>In the future I want to study human memory and AI, so I'm planning to become a neuroscientist!</p>
-					<p>But I also like to teach people, so I hope I can teach something at university.</p>
-					<p>As an engineer, I specialise in data science and AI, especially in areas related to the brain,</p>
-					<p>such as working with non-linear time series data, which is the same as the EEG, and image data,</p>
-					<p>which is the same as the fMRI. I also have experience in team management,</p>
-					<p>accounting and human resources, so I help run the community!</p>
-					<p>I'm going to be very active in the future so keep an eye on me!</p>
-				
-				</section>
-				<hr/>
-				<section id="Articles">
-					<header>
+	<div class="container">
+		<main>
+			<section id="About_me">
+				<header>
 					<h1>
-						Academic papers. 
+						About me.
+					</h1>
+				</header>
+				<p>Hello, nice to meet you, I'm Taiga Ishii, a freelance engineer with a lifelong passion for computers.
+				</p>
+				<p>I'm currently leveraging my data science and AI expertise, particularly in EEG and fMRI analysis, to
+					bridge the gap between neuroscience and artificial intelligence.</p>
+				<p>While I enjoy the technical aspects of this field, I also have a strong desire to teach.</p>
+				<p>This combination of passions has me aiming for a future career in academia, where I can inspire the
+					next generation.</p>
+				<p>My well-rounded background in team management, accounting, and human resources further equips me to
+					contribute to a vibrant academic community. </p>
+				<p>Stay tuned, because the future is bright!</p>
+
+			</section>
+			<hr />
+			<section id="Articles">
+				<header>
+					<h1>
+						Academic papers.
 					</h1>
 					<p>
 						(I haven't written anything at the moment, but I'll be writing more and more, so stay tuned!)
 					</p>
-					</header>
-					<ul class="terminal-toc">
-						<li>
-							<a href="#">
-								Sample academic papers 1.
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								Sample academic papers 2.
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								Sample academic papers 3.
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								Sample academic papers 4.
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								Sample academic papers 5.
-							</a>
-						</li>
-					</ul>
-				</section>
-				<hr/>
-				<section id="Carers">
-					<header>
-						<h1>
-							Careers.
-						</h1>
-					</header>
-					<div class="terminal-timeline">
-						<div class="terminal-card">
-							<header>
-								<a href="https://villages.jp/site">Online Silicon Valley</a>
-							</header>
-							<div>
-								Participated as a founding member of the community what goal is
-								"a world where talented people can innovate by harnessing their strengths and weaknesses."
-								<address>Now ~ May 2023</address>
-							</div>
-						</div>
-						<div class="terminal-card">
-							<header>
-								<a href="https://brain-tech.jp/">BRAINTECH CONSORTIUM</a>
-							</header>
-							<div>
-								Participation as a member of the event management team.
-								Here too, I learns neuroscience and interacts with a wide range of people.
-								<address>Now ~ July 2023</address>
-							</div>
-						</div>
-						<div class="terminal-card">
-							<header>
-								<a href="https://wba-initiative.org/">Whole Brain Architecture Initiative (WBAI)</a>
-							</header>
-							<div>
-								Participation as a community member of WBAI.
-								I learns neuroscience and interacts with a wide range of people.
-								<address>Now ~ June 2023</address>
-							</div>
-						</div>
-						<div class="terminal-card">
-							<header>
-								<a href="https://gci2.t.u-tokyo.ac.jp/">Data Science Course (GCI)</a>
-							</header>
-							<div>
-								Attended a data science training course organised by the University of Tokyo.
-								Learn basic concepts of data science and how to use AI on data science.
-								<address>July 2023 ~ April 2023</address>
-							</div>
-						</div>
-						<div class="terminal-card">
-							<header>
-								Sales representative services
-							</header>
-							<div>
-								Involved in a contract between a friend's company and its client.
-								Responsible for defining the client's requirements and conducting interviews.
-								<address>May 2023</address>
-							</div>
-						</div>
-						<div class="terminal-card">
-							<header>
-								<a href="https://sh-sol.jp/landing-page/home">Smart Hotel Solutions</a>
-							</header>
-							<div>
-								Joined as a long-term intern. Project manager of a small team in the research
-								and development of a completely new live performance technology.
-								Subsequently, I was in charge of the development of an AI that automatically detects human movements.
-								<address>July 2023 ~ October 2022</address>
-							</div>
-						</div>
-						<div class="terminal-card">
-							<header>
-								<a href="https://42.fr/en/homepage/">Ecole 42</a>|<a href="https://42tokyo.jp/">42Tokyo</a>
-							</header>
-							<div>
-								In March 2022, he took the month-long entrance examination 'Piscine' at 42tokyo,
-								the Japanese branch of 42, an engineering training institute from France.
-								<br>
-								I then passed, and from October 2022 to August 2023 he was a main student at 42, learning the lower layers
-								of the C language, including Library functions, Printf, Shell re-implementation and studying efficient algorithms.
-								<address>August 2023 ~ March 2022</address>
-							</div>
-						</div>
-						<div class="terminal-card">
-							<header>
-								<a href="https://www.helvete-tutor.org/">Event management at non-profit organisations</a>
-							</header>
-							<div>
-								Managed group discussion events with three team members
-								at a non-profit organisation called 'Online Tutor Helvete'.
-								<address>December 2021 ~ October 2021</address>
-							</div>
-						</div>
-						<div class="terminal-card">
-							<header>
-								<a href="https://nnn.ed.jp/">N High School</a>
-							</header>
-							<div>
-								Experienced in online-based correspondence high schools, managing events
-								for problem-based learning, admissions events and in-school events.
-								<address>December 2021 ~ October 2021</address>
-							</div>
+				</header>
+				<ul class="terminal-toc">
+					<li>
+						<a href="#">
+							Sample academic papers 1.
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Sample academic papers 2.
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Sample academic papers 3.
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Sample academic papers 4.
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Sample academic papers 5.
+						</a>
+					</li>
+				</ul>
+			</section>
+			<hr />
+			<section id="Carers">
+				<header>
+					<h1>
+						Careers.
+					</h1>
+				</header>
+				<div class="terminal-timeline">
+					<div class="terminal-card">
+						<header>
+							<a href="https://villages.jp/site">Online Silicon Valley</a>
+						</header>
+						<div>
+							Participated as a founding member of the community what goal is
+							"a world where talented people can innovate by harnessing their strengths and weaknesses."
+							<address>Now ~ May 2023</address>
 						</div>
 					</div>
-					<br/>
-				</section>
-				<hr/>
-				<section id="Skills">
-					<header>
-						<h1>
-							Skills
-						</h1>
-						<p>
-							The progression of the bar is an indicator of skills.
-							<br>
-							If it is above 50%, the skill is usable in practical work.
-							<br>
-							e.g.: Up to 20% are studying, from 30% onwards have personal use experience, around 50% are at working level, around 70% are stable and usable
-						</p>
-					</header>
-					<div class="example">
+					<div class="terminal-card">
+						<header>
+							<a href="https://brain-tech.jp/">BRAINTECH CONSORTIUM</a>
+						</header>
 						<div>
-							<section>
-									<header>
-										<h1>
-											Engineering skills
-										</h1>
-									</header>
-								<br/>
-									<p class="skill">
-										C
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="70%" style="width: 70%">
-										</div>
-									</div>
-									<p class="skill">
-										C++
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="40%" style="width: 40%">
-										</div>
-									</div>
-									<p class="skill">
-										Python
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="90%" style="width: 90%">
-										</div>
-									</div>
-									<p class="skill">
-										HTML&CSS
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="55%" style="width: 55%">
-										</div>
-									</div>
-									<p class="skill">
-										JavaScript
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="30%" style="width: 30%">
-										</div>
-									</div>
-									<p class="skill">
-										Rust
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="45%" style="width: 45%">
-										</div>
-									</div>
-									<p class="skill">
-										LaTeX
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="40%" style="width: 40%">
-										</div>
-									</div>
-									<p class="skill">
-										Django
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="60%" style="width: 60%">
-										</div>
-									</div>
-									<p class="skill">
-										Flask
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="50%" style="width: 50%">
-										</div>
-									</div>
-									<p class="skill">
-										FastAPI
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="45%" style="width: 45%">
-										</div>
-									</div>
-									<p class="skill">
-										Streamlit
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="50%" style="width: 50%">
-										</div>
-									</div>
-									<p class="skill">
-										Supervised learning
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="80%" style="width: 85%">
-										</div>
-									</div>
-									<p class="skill">
-										Unsupervised learning
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="80%" style="width: 80%">
-										</div>
-									</div>
-									<p class="skill">
-										Reinforcement learning
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="80%" style="width: 80%">
-										</div>
-									</div>
-									<p class="skill">
-										Deep learning
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="80%" style="width: 85%">
-										</div>
-									</div>
-									<p class="skill">
-										Nginx
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="60%" style="width: 60%">
-										</div>
-									</div>
-									<p class="skill">
-										Docker
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="60%" style="width: 60%">
-										</div>
-									</div>
-									<p class="skill">
-										Git
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="80%" style="width: 78%">
-										</div>
-									</div>
-									<p class="skill">
-										AWS
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="20%" style="width: 20%">
-										</div>
-									</div>
-									<p class="skill">
-										Linux Server
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="90%" style="width: 90%">
-										</div>
-									</div>
-								<br/>
-							</section>
-						</div>
-						<div>
-							<section>
-									<header>
-										<h1>
-											Other skills
-										</h1>
-									</header>
-								<br/>
-									<p class="skill">
-										Basic office work
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="90%" style="width: 90%">
-										</div>
-									</div>
-									<p class="skill">
-										Video editing & Image editing
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="50%" style="width: 50%">
-										</div>
-									</div>
-									<p class="skill">
-										Project management
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="70%" style="width: 70%">
-										</div>
-									</div>
-									<p class="skill">
-										Statistics analysis
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="80%" style="width: 80%">
-										</div>
-									</div>
-									<p class="skill">
-										Team building
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="65%" style="width: 65%">
-										</div>
-									</div>
-									<p class="skill">
-										Simple analysis using EEG and fMRI
-									</p>
-									<div class="progress-bar progress-bar-show-percent">
-										<div class="progress-bar-filled" data-filled="70%" style="width: 70%">
-										</div>
-									</div>
-								<br/>
-							</section>
+							Participation as a member of the event management team.
+							Here too, I learned neuroscience and interacted.
+							<address>Now ~ July 2023</address>
 						</div>
 					</div>
-				</section>
-				<hr/>
-				<section id="History">
-					<header>
+					<div class="terminal-card">
+						<header>
+							<a href="https://wba-initiative.org/">Whole Brain Architecture Initiative (WBAI)</a>
+						</header>
+						<div>
+							Participation as a community member of WBAI.
+							Where I learned neuroscience and interacted with a wide range of people.
+							<address>Now ~ June 2023</address>
+						</div>
+					</div>
+					<div class="terminal-card">
+						<header>
+							<a href="https://gci2.t.u-tokyo.ac.jp/">Data Science Course (GCI)</a>
+						</header>
+						<div>
+							Attended a data science training course organised by the University of Tokyo.
+							Learned basic concepts of data science and how to use AI on data science.
+							<address>July 2023 ~ April 2023</address>
+						</div>
+					</div>
+					<div class="terminal-card">
+						<header>
+							Sales representative services
+						</header>
+						<div>
+							Involved in a contract between a friend's company and its client.
+							Responsible for defining the client's requirements and conducting interviews.
+							<address>May 2023</address>
+						</div>
+					</div>
+					<div class="terminal-card">
+						<header>
+							<a href="https://sh-sol.jp/landing-page/home">Smart Hotel Solutions</a>
+						</header>
+						<div>
+							Joined as a long-term intern. Project manager of a small team in the research
+							and development of a completely new live performance technology.
+							Subsequently, I was in charge of the development of an AI that automatically detects human
+							movements.
+							<address>July 2023 ~ October 2022</address>
+						</div>
+					</div>
+					<div class="terminal-card">
+						<header>
+							<a href="https://42.fr/en/homepage/">Ecole 42</a>|<a href="https://42tokyo.jp/">42Tokyo</a>
+						</header>
+						<div>
+							In March 2022, he took the month-long entrance examination 'Piscine' at 42tokyo,
+							the Japanese branch of 42, an engineering training institute from France.
+							<br>
+							I then passed, and from October 2022 to August 2023 he was a main student at 42, learning
+							the lower layers
+							of the C language, including Library functions, Printf, Shell re-implementation and studying
+							efficient algorithms.
+							<address>August 2023 ~ March 2022</address>
+						</div>
+					</div>
+					<div class="terminal-card">
+						<header>
+							<a href="https://www.helvete-tutor.org/">Event management at non-profit organisations</a>
+						</header>
+						<div>
+							Managed group discussion events with three team members
+							at a non-profit organisation called 'Online Tutor Helvete'.
+							<address>December 2021 ~ October 2021</address>
+						</div>
+					</div>
+					<div class="terminal-card">
+						<header>
+							<a href="https://nnn.ed.jp/">N High School</a>
+						</header>
+						<div>
+							Experienced in online-based correspondence high schools, managing events
+							for problem-based learning, admissions events and in-school events.
+							<address>December 2021 ~ October 2021</address>
+						</div>
+					</div>
+				</div>
+				<br />
+			</section>
+			<hr />
+			<section id="Skills">
+				<header>
+					<h1>
+						Skills
+					</h1>
+					<p>
+						The progression of the bar is an indicator of skills.
+						<br>
+						If it is above 50%, the skill is usable in practical work.
+						<br>
+						e.g.: Up to 20% are studying, from 30% onwards have personal use experience, around 50% are at
+						working level, around 70% are stable and usable
+					</p>
+				</header>
+				<div class="example">
+					<div>
+						<section>
+							<header>
+								<h1>
+									Engineering skills
+								</h1>
+							</header>
+							<br />
+							<p class="skill">
+								C
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="70%" style="width: 70%">
+								</div>
+							</div>
+							<p class="skill">
+								C++
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="40%" style="width: 40%">
+								</div>
+							</div>
+							<p class="skill">
+								Python
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="90%" style="width: 90%">
+								</div>
+							</div>
+							<p class="skill">
+								HTML&CSS
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="55%" style="width: 55%">
+								</div>
+							</div>
+							<p class="skill">
+								JavaScript
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="30%" style="width: 30%">
+								</div>
+							</div>
+							<p class="skill">
+								Rust
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="45%" style="width: 45%">
+								</div>
+							</div>
+							<p class="skill">
+								LaTeX
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="40%" style="width: 40%">
+								</div>
+							</div>
+							<p class="skill">
+								Django
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="60%" style="width: 60%">
+								</div>
+							</div>
+							<p class="skill">
+								Flask
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="50%" style="width: 50%">
+								</div>
+							</div>
+							<p class="skill">
+								FastAPI
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="45%" style="width: 45%">
+								</div>
+							</div>
+							<p class="skill">
+								Streamlit
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="50%" style="width: 50%">
+								</div>
+							</div>
+							<p class="skill">
+								Supervised learning
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="80%" style="width: 85%">
+								</div>
+							</div>
+							<p class="skill">
+								Unsupervised learning
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="80%" style="width: 80%">
+								</div>
+							</div>
+							<p class="skill">
+								Reinforcement learning
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="80%" style="width: 80%">
+								</div>
+							</div>
+							<p class="skill">
+								Deep learning
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="80%" style="width: 85%">
+								</div>
+							</div>
+							<p class="skill">
+								Nginx
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="60%" style="width: 60%">
+								</div>
+							</div>
+							<p class="skill">
+								Docker
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="60%" style="width: 60%">
+								</div>
+							</div>
+							<p class="skill">
+								Git
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="80%" style="width: 78%">
+								</div>
+							</div>
+							<p class="skill">
+								AWS
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="20%" style="width: 20%">
+								</div>
+							</div>
+							<p class="skill">
+								Linux Server
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="90%" style="width: 90%">
+								</div>
+							</div>
+							<br />
+						</section>
+					</div>
+					<div>
+						<section>
+							<header>
+								<h1>
+									Other skills
+								</h1>
+							</header>
+							<br />
+							<p class="skill">
+								Basic office work
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="90%" style="width: 90%">
+								</div>
+							</div>
+							<p class="skill">
+								Video editing & Image editing
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="50%" style="width: 50%">
+								</div>
+							</div>
+							<p class="skill">
+								Project management
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="70%" style="width: 70%">
+								</div>
+							</div>
+							<p class="skill">
+								Statistics analysis
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="80%" style="width: 80%">
+								</div>
+							</div>
+							<p class="skill">
+								Team building
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="65%" style="width: 65%">
+								</div>
+							</div>
+							<p class="skill">
+								Simple analysis using EEG and fMRI
+							</p>
+							<div class="progress-bar progress-bar-show-percent">
+								<div class="progress-bar-filled" data-filled="70%" style="width: 70%">
+								</div>
+							</div>
+							<br />
+						</section>
+					</div>
+				</div>
+			</section>
+			<hr />
+			<section id="History">
+				<header>
 					<h1>
 						History
 					</h1>
-					</header>
-					<table>
+				</header>
+				<table>
 					<thead>
 						<tr>
-						<th>
-							MM/YYYY
-						</th>
-						<th>
-							Discription
-						</th>
-						<th>
-							Age
-						</th>
+							<th>
+								MM/YYYY
+							</th>
+							<th>
+								Description
+							</th>
+							<th>
+								Age
+							</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-						<th>
-							03/2024
-						</th>
-						<td>
-							Graduated from N High School (planned)
-						</td>
-						<td>
-							18
-						</td>
+							<th>
+								03/2024
+							</th>
+							<td>
+								Graduated from N High School (planned)
+							</td>
+							<td>
+								18
+							</td>
 						</tr>
 						<tr>
-						<th>
-							08/2023
-						</th>
-						<td>
-							Dropping out of 42Tokyo
-						</td>
-						<td>
-							18
-						</td>
+							<th>
+								08/2023
+							</th>
+							<td>
+								Dropping out of 42Tokyo
+							</td>
+							<td>
+								18
+							</td>
 						</tr>
 						<tr>
-						<th>
-							10/2022
-						</th>
-						<td>
-							Entered 42Tokyo
-						</td>
-						<td>
-							17
-						</td>
+							<th>
+								10/2022
+							</th>
+							<td>
+								Entered 42Tokyo
+							</td>
+							<td>
+								17
+							</td>
 						</tr>
 						<tr>
-						<th>
-							04/2021
-						</th>
-						<td>
-							Entered N High School
-						</td>
-						<td>
-							15
-						</td>
+							<th>
+								04/2021
+							</th>
+							<td>
+								Entered N High School
+							</td>
+							<td>
+								15
+							</td>
 						</tr>
 						<tr>
-						<th>
-							03/2021
-						</th>
-						<td>
-							Graduated from  Kashiba Junior High School, Kashiba
-						</td>
-						<td>
-							15
-						</td>
+							<th>
+								03/2021
+							</th>
+							<td>
+								Graduated from Kashiba Junior High School, Kashiba
+							</td>
+							<td>
+								15
+							</td>
 						</tr>
 						<tr>
-						<th>
-							04/2018
-						</th>
-						<td>
-							Entered Kashiba City Kashiba Junior High School
-						</td>
-						<td>
-							12
-						</td>
+							<th>
+								04/2018
+							</th>
+							<td>
+								Entered Kashiba City Kashiba Junior High School
+							</td>
+							<td>
+								12
+							</td>
 						</tr>
 						<tr>
-						<th>
-							03/2018
-						</th>
-						<td>
-							Graduated from Mitsuwa Primary School, Kashiba
-						</td>
-						<td>
-							12
-						</td>
+							<th>
+								03/2018
+							</th>
+							<td>
+								Graduated from Mitsuwa Primary School, Kashiba
+							</td>
+							<td>
+								12
+							</td>
 						</tr>
 						<tr>
-						<th>
-							04/2012
-						</th>
-						<td>
-							Entered Kashiba City Mitsuwa Elementary School
-						</td>
-						<td>
-							6
-						</td>
+							<th>
+								04/2012
+							</th>
+							<td>
+								Entered Kashiba City Mitsuwa Elementary School
+							</td>
+							<td>
+								6
+							</td>
 						</tr>
 						<tr>
-						<th>
-							03/2012
-						</th>
-						<td>
-							Graduated from Kobe Kanoko Kindergarten
-						</td>
-						<td>
-							6
-						</td>
+							<th>
+								03/2012
+							</th>
+							<td>
+								Graduated from Kobe Kanoko Kindergarten
+							</td>
+							<td>
+								6
+							</td>
 						</tr>
 						<tr>
-						<th>
-							04/2009
-						</th>
-						<td>
-							Entered Kobe Kanoko Kindergarten
-						</td>
-						<td>
-							4
-						</td>
+							<th>
+								04/2009
+							</th>
+							<td>
+								Entered Kobe Kanoko Kindergarten
+							</td>
+							<td>
+								4
+							</td>
 						</tr>
 						<tr>
-						<th>
-							05/2005
-						</th>
-						<td>
-							Born in Osaka City
-						</td>
-						<td>
-							0
-						</td>
+							<th>
+								05/2005
+							</th>
+							<td>
+								Born in Osaka City
+							</td>
+							<td>
+								0
+							</td>
 						</tr>
 					</tbody>
-					</table>
-				</section>
-				<hr/>
-				<section  id="Hobbies">
-					<header>
+				</table>
+			</section>
+			<hr />
+			<section id="Hobbies">
+				<header>
 					<h1>
 						Hobbies.
 					</h1>
 					<p>
 						These is something I often do in my leisure time!
 					</p>
-					</header>
-					<ul>
-						<li>
-							Second-hand bookshop tour
-						</li>
-						<dd>
-							Books constantly provide me with new knowledge!
-						</dd>
-						<br>
-						<strong>
-							Exercise
-						</strong>
-						<li>
-							Basketball
-						</li>
-						<dd>
-							Physical exercise is essential for engineers!
-						</dd>
-						<li>
-							Skateboard
-						</li>
-						<dd>
-							Experience classical physics first-hand!
-						</dd>
-						<li>
-							Breakdance
-						</li>
-						<dd>
-							The rotational moment is excellent!
-						</dd>
-					</ul>
-					<p>
-						Other things I like to do include!
-					</p>
-					<ul>
-						<li>
-							Watching Rap, Hiphop and street videos
-						</li>
-						<li>
-							Reading academic books
-						</li>
-						<li>
-							Karaoke and bowling
-						</li>
-						<li>
-							Talking to people.
-							<ul>
-								<li>
-									Talking about values
-								</li>
-								<li>
-									Talking about careers
-								</li>
-								<li>
-									Talking about philosophy
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</section>
-				<hr/>
-				<section  id="Socials">
-					<header>
-						<h1>
+				</header>
+				<ul>
+					<li>
+						Second-hand bookshop tour
+					</li>
+					<dd>
+						Books constantly provide me with new knowledge!
+					</dd>
+					<br>
+					<strong>
+						Exercise
+					</strong>
+					<li>
+						Basketball
+					</li>
+					<dd>
+						Physical exercise is essential for engineers!
+					</dd>
+					<li>
+						Skateboard
+					</li>
+					<dd>
+						Experience classical physics first-hand!
+					</dd>
+					<li>
+						Breakdance
+					</li>
+					<dd>
+						The rotational moment is excellent!
+					</dd>
+				</ul>
+				<p>
+					Other things I like to do include!
+				</p>
+				<ul>
+					<li>
+						Watching Rap, Hiphop and street videos
+					</li>
+					<li>
+						Reading academic books
+					</li>
+					<li>
+						Karaoke and bowling
+					</li>
+					<li>
+						Talking to people.
+						<ul>
+							<li>
+								Talking about values
+							</li>
+							<li>
+								Talking about careers
+							</li>
+							<li>
+								Talking about philosophy
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<hr />
+			<section id="Socials">
+				<header>
+					<h1>
 						Socials.
-						</h1>
-					</header>
-					<p>Below is my Social accounts!</p>
-					<p>If you need to contact me about a job, please contact me via email!</p>
-					<div class="example2">
-						<p><a href="https://twitter.com/ishishi_0920">X</a></p>
-						<p><a href="https://www.instagram.com/taiga_0056/">Instagram</a></p>
-						<p><a href="https://www.facebook.com/taiga.ishishi">Facebook</a></p>
-						<p><a href="https://www.linkedin.com/in/%E5%A4%A7%E9%9B%85-%E7%9F%B3%E4%BA%95-21bb9727a/">Linkedin</a></p>
-					</div>
-					<div class="example2">
-						<p><a href="https://github.com/steola6564">GitHub</a></p>
-						<p><a href="https://re-plus-do.com/">Blog</a></p>
-						<p><a href="https://steola6564.github.io/Portfolio/">Portfolio_ja</a></p>
-						<p><a href="mailto:it.laboratory.co.jp@gmail.com">Email</a></p>
-					</div>
-				</section>
-				<hr/>
-				<footer>
-					<p>
-						This Portfolio is based on
-						<a href="https://github.com/Gioni06/" rel="noopener noreferer" target="_blank">
+					</h1>
+				</header>
+				<p>Below is my Social accounts!</p>
+				<p>If you need to contact me about a job, please contact me via email!</p>
+				<div class="example2">
+					<p><a href="https://twitter.com/ishishi_0920">X</a></p>
+					<p><a href="https://www.instagram.com/taiga_0056/">Instagram</a></p>
+					<p><a href="https://www.facebook.com/taiga.ishishi">Facebook</a></p>
+					<p><a
+							href="https://www.linkedin.com/in/%E5%A4%A7%E9%9B%85-%E7%9F%B3%E4%BA%95-21bb9727a/">Linkedin</a>
+					</p>
+				</div>
+				<div class="example2">
+					<p><a href="https://github.com/steola6564">GitHub</a></p>
+					<p><a href="https://re-plus-do.com/">Blog</a></p>
+					<p><a href="https://steola6564.github.io/Portfolio/">Portfolio_ja</a></p>
+					<p><a href="mailto:it.laboratory.co.jp@gmail.com">Email</a></p>
+				</div>
+			</section>
+			<hr />
+			<footer>
+				<p>
+					This Portfolio is based on
+					<a href="https://github.com/Gioni06/" rel="noopener noreferer" target="_blank">
 						@Gioni06
-						</a>
-						work -
-						<a href="https://terminalcss.xyz/dark" rel="noopener noreferer">
+					</a>
+					work -
+					<a href="https://terminalcss.xyz/dark" rel="noopener noreferer">
 						Terminalcss-dark
-						</a>
-					</p>
-				</footer>
-				<hr/>
-				<section>
-					<header>
-					</header>
-					<p>
-						Created 12/01/2023
-						<a href="#top" class="pull-right">
+					</a>
+				</p>
+			</footer>
+			<hr />
+			<section>
+				<header>
+				</header>
+				<p>
+					Created 12/01/2023
+					<a href="#top" class="pull-right">
 						Top
-						</a>
-					</p>
-				</section>
-				</hr>
-			</main>
-		</div>
+					</a>
+				</p>
+			</section>
+			</hr>
+		</main>
+	</div>
 	</div>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js">
 	</script>
 	<script async="" defer="" src="https://buttons.github.io/buttons.js">
 	</script>
 	<script>
-	 document.addEventListener("DOMContentLoaded", function() {
-				document.querySelectorAll("pre code").forEach(block => {
-						window.hljs.highlightBlock(block);
-				});
+		document.addEventListener("DOMContentLoaded", function () {
+			document.querySelectorAll("pre code").forEach(block => {
+				window.hljs.highlightBlock(block);
+			});
 		});
 	</script>
- </body>
+</body>
+
 </html>
